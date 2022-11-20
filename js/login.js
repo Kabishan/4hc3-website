@@ -67,7 +67,7 @@ async function validateLogin() {
 		await sleep(3000);
 		loginSuccessMessage.style.display = "none";
 		await sleep(2000);
-		window.location.href = "../4hc3-website/seating.html";
+		window.location.href = "../4hc3-website/mainpage.html";
 	}
 	else {
 		loginSuccessMessage.style.display = "none";
