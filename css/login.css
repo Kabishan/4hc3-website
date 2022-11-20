@@ -65,7 +65,21 @@ a:link {
 	color: var(--theme-color);
 }
 
+a, a label {
+	cursor: pointer;
+}
+
 .login-button {
 	background-color: var(--theme-color) !important;
 	color: #fff !important;
+}
+
+#invalid-username-feedback, #invalid-password-feedback {
+	color: red;
+	font-size: 12px;
+	margin: 0 0 10px 0;
+}
+
+#username, #password {
+	margin-bottom: 10px;
 }

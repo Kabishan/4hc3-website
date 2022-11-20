@@ -26,11 +26,9 @@
                             <h4 class="card-title text-center">Login</h4>
                             <form method="POST" class="login-validation" novalidate="">
                                 <div class="form-group">
-                                    <label for="email">Username</label>
-                                    <input id="username" type="text" class="form-control" name="text" value="" required autofocus>
-                                    <div class="invalid-feedback">
-                                        Email is invalid
-                                    </div>
+                                    <label for="username">Username</label>
+                                    <input id="username" type="text" class="form-control" name="text"  placeholder="Waiter Username" required autofocus>
+                                    <div id="invalid-username-feedback"/>
                                 </div>
 
                                 <div class="form-group">
@@ -39,10 +37,8 @@
                                             Forgot Password?
                                         </a>
                                     </label>
-                                    <input id="password" type="password" class="form-control" name="password" required data-eye>
-                                    <div class="invalid-feedback">
-                                        Password is required
-                                    </div>
+                                    <input id="password" type="password" class="form-control" name="password" placeholder="Waiter Password" required data-eye>
+                                    <div id="invalid-password-feedback"/>
                                 </div>
 
                                 <div class="form-group">
@@ -53,13 +49,13 @@
                                 </div>
 
                                 <div class="form-group m-0">
-                                    <button type="submit" class="btn btn-block login-button">
+                                    <a onclick="javascript:validateLogin()" class="btn btn-block login-button">
                                         Login
-                                    </button>
+                                    </a>
                                 </div>
 
                                 <div class="mt-4 text-center">
-                                    Don't remember Username or Password?
+                                    Don't remember your Username or Password?
                                     <br>
                                     <a href="javascript:showHorizontalPrototypeMessage()">Click Here to Inform the Manager</a>
                                 </div>
