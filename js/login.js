@@ -27,26 +27,12 @@ async function validateLogin() {
 	invalidPasswordFeedback.style.display = "block";
 	loginSuccessMessage.style.display = "block";
 
-	if (username.value === USERNAME) {
-		if (password.value === PASSWORD) {
-			invalidUsernameFeedback.style.display = "none";
-			invalidPasswordFeedback.style.display = "none";
+	if (username.value === USERNAME && password.value === PASSWORD) {
+		invalidUsernameFeedback.style.display = "none";
+		invalidPasswordFeedback.style.display = "none";
 
-			username.style.border = "2px solid green";
-			password.style.border = "2px solid green";
-		}
-		else {
-			username.style.border = "2px solid red";
-			password.style.border = "2px solid red";
-
-			invalidUsernameFeedback.innerText = (username.value.length === 0) ? 
-			"Username cannot be left empty" : "Username is not correct";
-
-			invalidPasswordFeedback.innerText = (password.value.length === 0) ? 
-			"Password cannot be left empty" : "Password is not correct";
-			
-			valid = valid && false;
-		}
+		username.style.border = "2px solid green";
+		password.style.border = "2px solid green";
 	}
 	else {
 		username.style.border = "2px solid red";
