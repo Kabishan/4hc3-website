@@ -27,33 +27,37 @@ async function validateLogin() {
 	invalidPasswordFeedback.style.display = "block";
 	loginSuccessMessage.style.display = "block";
 
-	if (username.value.length === 0) {
-		invalidUsernameFeedback.innerText = "Username cannot be left empty"
-		username.style.border = "2px solid red";
-		valid = valid && false;
-	} 
-	else if (username.value === USERNAME) {
-		invalidUsernameFeedback.style.display = "none";
-		username.style.border = "2px solid green";
-	}
-	else {
-		invalidUsernameFeedback.innerText = "Username is not correct"
-		username.style.border = "2px solid red";
-		valid = valid && false;
-	}
+	if (username.value === USERNAME) {
+		if (password.value === PASSWORD) {
+			invalidUsernameFeedback.style.display = "none";
+			invalidPasswordFeedback.style.display = "none";
 
-	if (password.value.length === 0) {
-		invalidPasswordFeedback.innerText = "Password cannot be left empty"
-		password.style.border = "2px solid red";
-		valid = valid && false;
-	} 
-	else if (password.value === PASSWORD) {
-		invalidPasswordFeedback.style.display = "none";
-		password.style.border = "2px solid green";
+			username.style.border = "2px solid green";
+			password.style.border = "2px solid green";
+		}
+		else {
+			username.style.border = "2px solid red";
+			password.style.border = "2px solid red";
+
+			invalidUsernameFeedback.innerText = (username.value.length === 0) ? 
+			"Username cannot be left empty" : "Username is not correct";
+
+			invalidPasswordFeedback.innerText = (password.value.length === 0) ? 
+			"Password cannot be left empty" : "Password is not correct";
+			
+			valid = valid && false;
+		}
 	}
 	else {
-		invalidPasswordFeedback.innerText = "Password is not correct"
+		username.style.border = "2px solid red";
 		password.style.border = "2px solid red";
+
+		invalidUsernameFeedback.innerText = (username.value.length === 0) ? 
+		"Username cannot be left empty" : "Username is not correct";
+
+		invalidPasswordFeedback.innerText = (password.value.length === 0) ?
+		"Password cannot be left empty" : "Password is not correct";
+
 		valid = valid && false;
 	}
 
@@ -61,6 +65,8 @@ async function validateLogin() {
 		loginSuccessMessage.innerText = "Correct Username and Password. Logging you in...";
 
 		await sleep(3000);
+		loginSuccessMessage.style.display = "none";
+		await sleep(2000);
 		window.location.href = "../seating.html";
 	}
 	else {
