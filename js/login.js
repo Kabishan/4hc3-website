@@ -21,9 +21,11 @@ async function validateLogin() {
 
 	var invalidUsernameFeedback = document.getElementById("invalid-username-feedback");
 	var invalidPasswordFeedback = document.getElementById("invalid-password-feedback");
+	var loginSuccessMessage = document.getElementById("login-success-msg");
 
 	invalidUsernameFeedback.style.display = "block";
 	invalidPasswordFeedback.style.display = "block";
+	loginSuccessMessage.style.display = "block";
 
 	if (username.value.length === 0) {
 		invalidUsernameFeedback.innerText = "Username cannot be left empty"
@@ -56,18 +58,13 @@ async function validateLogin() {
 	}
 
 	if (valid) {
-		var loginButton = document.getElementById("login-button");
-		var loginButtonParent = loginButton.parentNode;
-
-		var loginMessage = document.createElement("div");
-		loginMessage.style.setProperty("color", "green");
-		loginMessage.style.setProperty("text-align", "center");
-		loginMessage.innerText = "Correct Username and Password. Logging you in..."
-
-		loginButtonParent.insertBefore(loginMessage, loginButton);
+		loginSuccessMessage.innerText = "Correct Username and Password. Logging you in...";
 
 		await sleep(3000);
 		window.location.href = "../seating.html";
+	}
+	else {
+		loginSuccessMessage.style.display = "none";
 	}
 }
 

@@ -84,3 +84,8 @@ a, a label {
 #username, #password {
 	margin-bottom: 10px;
 }
+
+#login-success-msg {
+	color: green;
+	text-align: center;
+}
