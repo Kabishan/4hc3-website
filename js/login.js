@@ -26,21 +26,27 @@ function validateLogin() {
 
 	if (username.value.length === 0) {
 		invalidUsernameFeedback.innerText = "Username cannot be left empty"
+		username.style.border = "2px solid red";
 	} 
 	else if (username.value === USERNAME) {
 		invalidUsernameFeedback.style.display = "none";
+		username.style.border = "2px solid green";
 	}
 	else {
 		invalidUsernameFeedback.innerText = "Username is not correct"
+		username.style.border = "2px solid red";
 	}
 
 	if (password.value.length === 0) {
 		invalidPasswordFeedback.innerText = "Password cannot be left empty"
+		password.style.border = "2px solid red";
 	} 
 	else if (password.value === PASSWORD) {
 		invalidPasswordFeedback.style.display = "none";
+		password.style.border = "2px solid green";
 	}
 	else {
 		invalidPasswordFeedback.innerText = "Password is not correct"
+		password.style.border = "2px solid red";
 	}
 }
