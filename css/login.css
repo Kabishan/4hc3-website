@@ -84,9 +84,3 @@ a, a label {
 #username, #password {
 	margin-bottom: 10px;
 }
-
-.valid-feedback {
-	color: green;
-	font-size: 12px;
-	margin: 0 0 10px 0;
-}

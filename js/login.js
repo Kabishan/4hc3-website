@@ -67,7 +67,7 @@ async function validateLogin() {
 		loginButtonParent.insertBefore(loginMessage, loginButton);
 
 		await sleep(3000);
-		alert("Hello");
+		window.location.href = "../seating.html";
 	}
 }
 
