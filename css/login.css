@@ -89,3 +89,49 @@ a, a label {
 	color: green;
 	text-align: center;
 }
+
+.fa-info-circle {
+	color: var(--theme-color);
+}
+
+.info-icon {
+	position: relative;
+}
+
+.info-icon:hover .info-msg {
+	display: block;
+}
+
+.info-msg {
+	position: absolute;
+	left: -2rem;
+	top: -6rem;
+	padding: 20px;
+	width: 200px;
+	text-align: center;
+	background-color: #fff;
+	border-radius: 30px;
+	box-shadow: 2px 2px 4px #888;
+	display: none;
+}
+  
+.info-msg:after {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 38px;
+	top: 80px;
+	border: 15px solid;
+	border-color: #fff transparent transparent #fff;
+}
+
+.info-msg:before {
+	content: ' ';
+	position: absolute;
+	width: 0;
+	height: 0;
+	left: 30px;
+	top: 80px;
+	border-color: #666 transparent transparent #666;
+}
