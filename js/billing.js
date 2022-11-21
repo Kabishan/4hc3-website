@@ -22,7 +22,7 @@ function calculateTotal()
 
   total = first + second + third + fourth + fifth;
   let finaltotal = Math.round(total * 100) / 100;
-  $("#total_value").text(finaltotal + "$");
+  $("#total_value").text("$" + finaltotal);
   
 }
 

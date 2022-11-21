@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Billing</title>
+    <title>Billing Page</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -17,16 +17,20 @@
       padding: 0;
       margin: 0;
       outline: none;
-      font-family: Roboto, Arial, sans-serif;
+      font-family: "Raleway", Arial, sans-serif;
       font-size: 14px;
       color: rgb(14, 22, 90);
       line-height: 22px;
+      }
+      body {
+        background-color: #33658A;
       }
       h1 {
       position: absolute;
       margin: 0;
       font-size: 40px;
-      color: #fff;
+      font-family: "Raleway", Arial, sans-serif;
+      color: #33658A;
       z-index: 2;
       line-height: 83px;
       }
@@ -66,7 +70,7 @@
       }
       .banner::after {
       content: "";
-      background-color: rgba(0, 0, 0, 0.2); 
+      background-color: #EBEBEB; 
       position: absolute;
       width: 100%;
       height: 100%;
@@ -209,6 +213,9 @@
       display:block;
       padding-bottom:5px;
       }
+      .red {
+        color: red;
+      }
       }
     </style>
   </head>
@@ -216,56 +223,56 @@
     <div class="testbox">
       <form action="/">
         <div class="banner">
-          <h1>Billing and Payment for Customer meals</h1>
+          <h1>Billing for Customer Meals</h1>
         </div>
         <br/>
         <p>
         </p>
         <br/>
         <div class="customername">
-            <label for="fname"> Customer Name<span>*</span></label>
+            <label for="fname">Customer Name <span class="red">*</span></label>
             <input id="cname" type="text" name="cname" required/>
         </div>
         <div class="colums">
           
           <div class="item">
-            <label for="lname"> Item 1 Price<span>*</span></label>
+            <label for="lname">Item 1 Price <span>*</span></label>
             <input id="price1" type="number" class = "price" value = 0 step="0.01" name="lname" required/>
           </div>
           <div class="item">
-            <label for="title">Percentage Paid<span>*</span></label>
+            <label for="title">Percentage Paid <span>*</span></label>
             <input id="percent1" type="number" class = "price" value = 0 step="0.01" name="title" required/>
           </div>
           <div class="item">
-            <label for="org">Item 2 Price<span>*</span></label>
+            <label for="org">Item 2 Price <span>*</span></label>
             <input id="price2" type="number" step="0.01" value = 0 name="org" required/>
           </div>
           <div class="item">
-            <label for="eaddress">Percentage Paid<span>*</span></label>
+            <label for="eaddress">Percentage Paid <span>*</span></label>
             <input id="percent2" type="number" step="0.01" value = 0 name="eaddress" required/>
           </div>
           <div class="item">
-            <label for="phone">Item 3 Price<span>*</span></label>
+            <label for="phone">Item 3 Price <span>*</span></label>
             <input id="price3" type="number" step="0.01" value = 0 name="phone" required/>
           </div>
           <div class="item">
-            <label for="fax">Percentage Paid<span>*</span></label>
+            <label for="fax">Percentage Paid <span>*</span></label>
             <input id="percent3" type="number" step="0.01" value = 0 name="fax" required/>
           </div>
           <div class="item">
-            <label for="address1">Item 4 Price<span>*</span></label>
+            <label for="address1">Item 4 Price <span>*</span></label>
             <input id="price4" type="number" step="0.01" value = 0 name="address1" required/>
           </div>
           <div class="item">
-            <label for="address2">Percentage Paid<span>*</span></label>
+            <label for="address2">Percentage Paid <span>*</span></label>
             <input id="percent4" type="number" step="0.01" value = 0 name="address2" required/>
           </div>
           <div class="item">
-            <label for="city">Item 5 Price<span>*</span></label>
+            <label for="city">Item 5 Price <span>*</span></label>
             <input id="price5" type="number" step="0.01" value = 0 name="city" required/>
           </div>
           <div class="item">
-            <label for="state">Percentage Paid<span>*</span></label>
+            <label for="state">Percentage Paid <span>*</span></label>
             <input id="percent5" type="number" step="0.01" value = 0 name="state" required/>
           </div>
         </div>
@@ -278,7 +285,7 @@
         </div>
         <div class="btn-block">
             <div class="w3-bar w3-border">
-          <a href="mainpage.html" class="w3-bar-item w3-button w3-hide-small">Return to main page</a>
+          <a href="mainpage.html" class="w3-bar-item w3-button w3-hide-small">Return to Main Page</a>
             </div>
         </div>
         </div>
