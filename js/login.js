@@ -2,7 +2,7 @@ const USERNAME = "4hc3_ta";
 const PASSWORD = "4hc3";
 
 function showHorizontalPrototypeMessage() {
-	alert("This feature was not implemented vertically.");
+	alert("This feature was not implemented vertically. Come back soon...");
 }
 
 function showPassword() {
